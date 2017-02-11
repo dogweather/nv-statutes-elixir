@@ -16,8 +16,16 @@ defmodule NRS do
     :world
   end
 
+
   def title_count(html) do
     Floki.find(html, ".MsoNormalTable tr")
+    |> Enum.filter(&is_title_row/1)
     |> length
+  end
+
+
+  def is_title_row(row) do
+    {_, _, tds} = row
+    length(tds) == 1
   end
 end
