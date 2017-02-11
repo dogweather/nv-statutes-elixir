@@ -16,6 +16,8 @@ defmodule NRS do
     :world
   end
 
-  def title_count do
+  def title_count(html) do
+    Floki.find(html, ".MsoNormalTable tr")
+    |> length
   end
 end
