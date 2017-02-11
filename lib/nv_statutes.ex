@@ -19,10 +19,31 @@ defmodule NRS do
   end
 
 
+  def titles(html) do
+    title_rows(html)
+    |> map(&new_title/1)
+  end
+
+
+  def new_title(doc) do
+    name = Floki.text(doc)
+    |> String.split("—")
+    |> Enum.at(1)
+    |> String.trim 
+
+    %{ name: name }
+  end
+
+
   def title_count(html) do
+    title_rows(html)
+    |> length
+  end
+
+
+  def title_rows(html) do
     content_rows(html)
     |> filter(&is_title_row/1)
-    |> length
   end
 
 
