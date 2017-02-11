@@ -1,3 +1,5 @@
+import Enum
+
 defmodule NRS do
   @moduledoc """
   Documentation for NRS.
