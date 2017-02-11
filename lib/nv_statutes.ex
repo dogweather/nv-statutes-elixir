@@ -21,7 +21,7 @@ defmodule NRS do
 
   def title_count(html) do
     content_rows(html)
-    |> Enum.filter(&is_title_row/1)
+    |> filter(&is_title_row/1)
     |> length
   end
 
