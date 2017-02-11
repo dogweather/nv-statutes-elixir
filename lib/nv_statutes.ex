@@ -24,8 +24,7 @@ defmodule NRS do
   end
 
 
-  def is_title_row(row) do
-    {_, _, tds} = row
+  def is_title_row({_, _, tds}) do
     length(tds) == 1
   end
 end
