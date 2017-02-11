@@ -29,6 +29,7 @@ defmodule NRS do
   end
 
 
-  def is_title_row({_, _, [_td]}), do: true
-  def is_title_row({_, _, _}),  do: false
+  def is_title_row({_, _, tds}) do
+    length(tds) == 1
+  end
 end
