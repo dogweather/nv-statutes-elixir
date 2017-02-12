@@ -1,24 +1,6 @@
 import Enum
 
 defmodule NRS do
-  @moduledoc """
-  Documentation for NRS.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> NRS.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
-
-
   def titles(html) do
     title_rows(html)
     |> map(&new_title/1)
@@ -29,7 +11,7 @@ defmodule NRS do
     name = Floki.text(doc)
     |> String.split("—")
     |> Enum.at(1)
-    |> String.trim 
+    |> String.trim
 
     %{ name: name }
   end
