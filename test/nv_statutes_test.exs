@@ -2,13 +2,15 @@ defmodule NRSTest do
   use ExUnit.Case
   doctest NRS
 
-  test "finds the correct number of titles" do
-    html = File.read!("nrs.html")
-    assert 59 == length(NRS.titles(html))
+  setup_all do
+    {:ok, html: File.read!("nrs.html")}
   end
 
-  test "gets the first title's name" do
-    html = File.read!("nrs.html")
-    assert "STATE JUDICIAL DEPARTMENT" == List.first(NRS.titles(html)).name
+  test "finds the correct number of titles", state do
+    assert 59 == length(NRS.titles(state[:html]))
+  end
+
+  test "gets the first title's name", state do
+    assert "STATE JUDICIAL DEPARTMENT" == List.first(NRS.titles(state[:html])).name
   end
 end

@@ -13,7 +13,7 @@ defmodule NRS do
     |> Enum.at(1)
     |> String.trim
 
-    %{ name: name }
+    %{name: name}
   end
 
 
