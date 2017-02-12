@@ -4,7 +4,7 @@ defmodule NRSTest do
 
   test "finds the correct number of titles" do
     html = File.read!("nrs.html")
-    assert 59 == NRS.title_count(html)
+    assert 59 == length(NRS.titles(html))
   end
 
   test "gets the first title's name" do
