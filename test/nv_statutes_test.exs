@@ -18,12 +18,12 @@ defmodule NvStatutesTest do
   end
 
 
-  test "gets the first title's name", state do
+  test "gets a title's name", state do
     assert state[:first_title].name == "STATE JUDICIAL DEPARTMENT"
   end
 
 
-  test "gets the first title's number", state do
+  test "gets a title's number", state do
     assert state[:first_title].number == 1
   end
 end
