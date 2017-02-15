@@ -10,14 +10,10 @@ defmodule NRS do
 
 
   defp new_title(doc) do
-    name = Floki.text(doc)
-    |> String.split("—")
-    |> Enum.at(1)
-    |> String.trim
+    [number_column, name_column] = Floki.text(doc) |> String.split("—")
 
-    number = Floki.text(doc)
-    |> String.split("—")
-    |> Enum.at(0)
+    name   = String.trim(name_column)
+    number = number_column
     |> String.split
     |> Enum.at(1)
     |> String.to_integer
