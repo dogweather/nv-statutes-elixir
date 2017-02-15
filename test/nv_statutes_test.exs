@@ -1,4 +1,4 @@
-defmodule NRSTest do
+defmodule NvStatutesTest do
   use ExUnit.Case
   doctest NRS
 
@@ -11,6 +11,10 @@ defmodule NRSTest do
   end
 
   test "gets the first title's name", state do
-    assert "STATE JUDICIAL DEPARTMENT" == List.first(NRS.titles(state[:html])).name
+    assert List.first(NRS.titles(state[:html])).name == "STATE JUDICIAL DEPARTMENT"
+  end
+
+  test "gets the first title's number", state do
+    assert List.first(NRS.titles(state[:html])).number == 1
   end
 end
