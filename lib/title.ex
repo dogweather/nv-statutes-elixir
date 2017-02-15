@@ -1,4 +1,4 @@
 defmodule Title do
-  @enforce_keys [:name, :number]
-  defstruct     [:name, :number]
+  @enforce_keys [:name, :number, :chapters]
+  defstruct     [:name, :number, :chapters]
 end

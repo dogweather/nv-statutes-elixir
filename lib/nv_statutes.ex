@@ -14,7 +14,14 @@ defmodule NRS do
     |> Enum.at(1)
     |> String.trim
 
-    %Title{name: name, number: -1}
+    number = Floki.text(doc)
+    |> String.split("—")
+    |> Enum.at(0)
+    |> String.split
+    |> Enum.at(1)
+    |> String.to_integer
+
+    %Title{name: name, number: number, chapters: []}
   end
 
 
