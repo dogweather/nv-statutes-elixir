@@ -1,4 +1,5 @@
 import Enum
+import Title
 
 defmodule NRS do
   def titles(html) do
@@ -13,7 +14,7 @@ defmodule NRS do
     |> Enum.at(1)
     |> String.trim
 
-    %{name: name}
+    %Title{name: name, number: -1}
   end
 
 
