@@ -2,8 +2,9 @@ import Enum
 import Title
 
 defmodule NRS do
-  def titles(html) do
-    title_rows(html)
+
+  def titles(index_html) do
+    title_rows(index_html)
     |> map(&new_title/1)
   end
 
