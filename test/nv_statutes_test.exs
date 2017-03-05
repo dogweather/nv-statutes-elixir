@@ -26,4 +26,9 @@ defmodule NvStatutesTest do
   test "gets a title's number", state do
     assert state[:first_title].number == 1
   end
+
+
+  test "reads a chapter correctly", state do
+    assert length(state[:first_title].chapters) > 0
+  end
 end
