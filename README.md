@@ -1,19 +1,4 @@
-# NRS
+# Nevada Statutes Parser
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `nv_statutes` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [{:nv_statutes, "~> 0.1.0"}]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/nv_statutes](https://hexdocs.pm/nv_statutes).
-
+Exploring Elixir as the implementation language. [Haskell](https://github.com/public-law/nevada-revised-statutes-parser)
+was chosen for the final project.
