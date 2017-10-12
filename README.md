@@ -1,4 +1,3 @@
 # Nevada Statutes Parser
 
-Exploring Elixir as the implementation language. [Haskell](https://github.com/public-law/nevada-revised-statutes-parser)
-was chosen for the final project.
+Exploring Elixir as the implementation language. Haskell was chosen for the [production app](https://github.com/public-law/nevada-revised-statutes-parser).
